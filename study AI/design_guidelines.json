@@ -1,0 +1,137 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer",
+    "mission": "Create a 'Neo-Academic' study platform that blends the warmth of physical paper with the precision of AI. Avoid generic SaaS tropes.",
+    "principles": [
+      "Fusion: Academic Tradition x Cyberpunk Focus",
+      "Emotion: Calm confidence",
+      "Content: The study material is the hero",
+      "Interaction: Tactile, swipe-based, gamified"
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Space Grotesk",
+        "weights": ["600", "700"],
+        "usage": "Hero titles, Section headers, Stat numbers",
+        "letterSpacing": "-0.02em"
+      },
+      "body": {
+        "family": "Manrope",
+        "weights": ["400", "500"],
+        "usage": "Long form text, Flashcard content, UI labels"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "weights": ["400"],
+        "usage": "Code snippets, Technical terms, Tiny labels"
+      }
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tighter",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl font-medium",
+      "body-lg": "text-lg leading-relaxed",
+      "body-base": "text-base leading-relaxed text-muted-foreground"
+    }
+  },
+  "colors": {
+    "theme_strategy": "Hybrid Toggle (Paper Light / Deep Focus Dark)",
+    "palette": {
+      "light": {
+        "background": "#F9F8F6",
+        "foreground": "#1A1A1A",
+        "card": "#FFFFFF",
+        "card_foreground": "#1A1A1A",
+        "primary": "#4F46E5",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#E0E7FF",
+        "secondary_foreground": "#3730A3",
+        "accent": "#10B981",
+        "border": "#E5E5E5"
+      },
+      "dark": {
+        "background": "#09090B",
+        "foreground": "#EDEDED",
+        "card": "#121214",
+        "card_foreground": "#EDEDED",
+        "primary": "#6366F1",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#1E1B4B",
+        "secondary_foreground": "#C7D2FE",
+        "accent": "#34D399",
+        "border": "#27272A"
+      }
+    },
+    "usage_rules": {
+      "gradients": "Use subtle noise gradients, NO linear generic gradients. Example: 'bg-gradient-to-b from-transparent to-black/5'",
+      "borders": "Use 1px borders with 10% opacity for a 'technical' feel.",
+      "glassmorphism": "Use backdrop-blur-xl with 1px white/10 border for sticky headers."
+    }
+  },
+  "layout": {
+    "spacing_system": {
+      "base": "Generous. Use p-8 or p-12 for containers.",
+      "containers": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "grid_strategy": "Bento Grid. Mix 1x1, 2x1, and 2x2 cells. Never equal columns."
+    },
+    "patterns": {
+      "dashboard": "Asymmetric Bento Grid. Hero stat (col-span-2) + Quick Actions (col-span-1).",
+      "study_mode": "Focus Mode. Center stage content, dimmed peripherals. Minimal UI.",
+      "marketing": "Large typography, overlapping elements, scroll-triggered reveals."
+    }
+  },
+  "components": {
+    "library": "Shadcn UI (Customized)",
+    "overrides": {
+      "Button": "Rounded-full for actions, sharp corners for filters. Hover: scale-105.",
+      "Card": "No shadow by default. 1px border. Hover: shadow-lg + border-primary/50.",
+      "Input": "Bg-transparent, border-b only (for forms) or full pill shape (for search).",
+      "Dialog": "Backdrop blur-md. Modal animation: scale-95 to scale-100."
+    },
+    "custom_components": [
+      "Flashcard: 3D flip animation, swipe gestures (mobile).",
+      "ProgressBar: Segmented, not continuous (gamified feel).",
+      "StreakCounter: Fire icon with animated glow."
+    ]
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "rules": {
+      "page_transition": "Opacity fade + slight y-axis slide.",
+      "hover": "Spring physics (stiffness: 300, damping: 20).",
+      "list_items": "Staggered entrance (0.05s delay per item).",
+      "micro_interactions": "Heart beat on 'like', shake on 'error'."
+    }
+  },
+  "images": {
+    "strategy": "Mix of high-quality photography (students) and abstract data art (neural networks).",
+    "selected_urls": {
+      "hero_bg": "https://images.unsplash.com/photo-1710438598615-f59b1c0c006b?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "student_focus": "https://images.unsplash.com/photo-1760278041726-24a054681dde?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "abstract_ai": "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "study_group": "https://images.pexels.com/photos/1181569/pexels-photo-1181569.jpeg",
+      "neural_nodes": "https://images.unsplash.com/photo-1645839078449-124db8a049fd?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Add a subtle grain overlay (opacity 0.03) to the entire app to reduce digital harshness.",
+    "icons": "Lucide React (Stroke width 1.5px).",
+    "3d_elements": "Use 'tsparticles' for a subtle 'neural network' background in the Hero section."
+  },
+  "universal_guidelines": {
+    "do_not": [
+      "Use generic 'SaaS Blue' gradients.",
+      "Center text by default (unless it's a headline).",
+      "Use 'Inter' for headings.",
+      "Make everything a card."
+    ],
+    "must_do": [
+      "Add 'data-testid' to all interactive elements.",
+      "Ensure Dark Mode is not just 'black' but 'rich dark grey'.",
+      "Use 'sonner' for toasts.",
+      "Make the study interface distraction-free (hide nav bar in focus mode)."
+    ]
+  }
+}
